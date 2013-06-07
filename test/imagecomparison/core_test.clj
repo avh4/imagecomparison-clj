@@ -1,5 +1,5 @@
-(ns {{ project }}.core-test
-  (:use [{{ project }}.core])
+(ns imagecomparison.core-test
+  (:use [imagecomparison.core])
   (:use [midje.sweet]))
 
 (facts "about failing tests"
