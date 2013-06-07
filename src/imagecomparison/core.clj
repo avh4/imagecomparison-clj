@@ -1,6 +1,3 @@
 (ns imagecomparison.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn looks-like [filename] (fn [actual] false))
