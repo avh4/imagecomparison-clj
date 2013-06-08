@@ -1,4 +1,5 @@
 (ns imagecomparison.core)
+(require '[midje.checking.core :as checking])
 
 (defn- load-image [filename]
   (try
@@ -10,6 +11,13 @@
   (fn [actual]
     (let [path "./"
           filename (str path imagename)
+          actual-filename (str path "actual-" imagename)
           reference-image (load-image filename)
           result (net.avh4.util.imagecomparison.ImageComparison/compare actual reference-image)]
-      (.isEqual result))))
+      (if (.isEqual result)
+        true
+        (do
+          (.writeActualImageToFile result actual-filename)
+          (checking/as-data-laden-falsehood
+            {:notes [(.getFailureMessage result)
+                     (str "actual image saved as " actual-filename)]}))))))
