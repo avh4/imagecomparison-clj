@@ -13,7 +13,7 @@ Add the following dependencies to your `project.clj`:
   [net.avh4.util/imagecomparison-swing "0.3.0"]
 ```
 
-Use the `looks-like` checker in your midje tests:
+Use the `looks-like` checker in your [midje](https://github.com/marick/Midje) tests:
 
 ```clojure
 (facts "about my JComponent subclass"
@@ -33,6 +33,17 @@ Actual result did not agree with the checking function.
         actual image saved as ./actual-snazzy-dashboard.png
 FAILURE: 1 check failed. 
 ```
+
+### What you can test
+
+The `looks-like` matcher currently can assert against the following types of objects:
+
+* `java.awt.image.BufferedImage`
+* `java.awt.Component` (which includes `javax.swing.JComponent`)
+* `javax.swing.JFrame`
+
+Additional renderers can be added by implementing `net.avh4.util.imagerender.Renderer` and registering in `META-INF/services`
+(see [imagecomparison-java](https://github.com/avh4/imagecomparison), and [ServiceLoader](http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html)).
 
 ## License
 
