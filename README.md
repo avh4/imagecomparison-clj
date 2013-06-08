@@ -9,7 +9,7 @@ Tools for comparing images and writing image-based approval tests.
 Add the following dependencies to your `project.clj`:
 
 ```clojure
-  [net.avh4.clj/imagecomparison "1.0.0"]
+  [net.avh4.clj/imagecomparison "1.0.1"]
   [net.avh4.util/imagecomparison-swing "0.3.0"]
 ```
 
