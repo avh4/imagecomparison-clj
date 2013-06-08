@@ -16,6 +16,8 @@ Add the following dependencies to your `project.clj`:
 Use the `looks-like` checker in your [midje](https://github.com/marick/Midje) tests:
 
 ```clojure
+(use 'imagecomparison.core)
+
 (facts "about my JComponent subclass"
   (fact "it draws a snazzy dashboard"
     (MyJComponent. ) => (looks-like "snazzy-dashboard.png")))
