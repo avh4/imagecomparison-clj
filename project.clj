@@ -1,4 +1,4 @@
-(defproject net.avh4.clj/imagecomparison "1.0.1"
+(defproject net.avh4.clj/imagecomparison "1.0.2-SNAPSHOT"
   :min-lein-version "2.0.0"
   :description "Tools for comparing images and writing image-based approval tests"
   :url "http://github.com/avh4/imagecomparison-clj"
