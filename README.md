@@ -38,7 +38,7 @@ FAILURE: 1 check failed.
 
 ### What you can test
 
-The `looks-like` matcher currently can assert against the following types of objects:
+The `looks-like` checker currently can check the following types of objects:
 
 * `java.awt.image.BufferedImage`
 * `java.awt.Component` (which includes `javax.swing.JComponent`)
